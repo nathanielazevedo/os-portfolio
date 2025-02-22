@@ -93,7 +93,7 @@ const Terminal = () => {
       // Add command to history
       setHistory((prev) => [
         ...prev,
-        { text: `${currentPath}$ ${command}`, isCommand: true },
+        { text: `${currentPath} $ ${command}`, isCommand: true },
       ]);
 
       if (command) {
@@ -121,12 +121,12 @@ const Terminal = () => {
         // width: "100%",
         // height: "100%",
         height: "230px",
-        minHeight: "100%",
-        backgroundColor: "#1a1a1a",
+        // minHeight: "100%",
+        backgroundColor: "#1e1e1e",
         // color: "#00ff00",
         color: "white",
         fontFamily: "monospace",
-        padding: "10px",
+        padding: "5px",
       }}
     >
       {history.map((entry, i) => (
@@ -135,14 +135,23 @@ const Terminal = () => {
           style={{
             whiteSpace: "pre-wrap",
             marginBottom: "1px",
-            fontSize: "10px",
+            fontSize: "8px",
+            // fontWeight: "bold",
+            // padding: "0 5px",
           }}
         >
           {entry.text}
         </div>
       ))}
-      <div style={{ display: "flex", fontSize: "10px", alignItems: "center" }}>
-        <span>{currentPath}$ </span>
+      <div
+        style={{
+          display: "flex",
+          fontSize: "10px",
+          alignItems: "center",
+          // marginTop: "1px",
+        }}
+      >
+        <span style={{ fontSize: "8px" }}>{currentPath} $ </span>
         <input
           type="text"
           value={inputValue}
@@ -155,8 +164,11 @@ const Terminal = () => {
             fontFamily: "monospace",
             flexGrow: 1,
             outline: "none",
-            fontSize: "10px",
+            fontSize: "8px",
             color: "white",
+            // fontWeight: "bold",
+            padding: "0 5px",
+            // marginLeft: "1px",
           }}
           autoFocus
         />
