@@ -44,7 +44,7 @@ const BottomNavMain = () => {
           bottom: "10px",
           left: "50%",
           transform: "translateX(-50%)",
-          background: "rgba(255, 255, 255, 0.2)",
+          background: "rgba(255, 255, 255, 0.09)",
           backdropFilter: "blur(25px)",
           display: "flex",
           alignItems: "center",

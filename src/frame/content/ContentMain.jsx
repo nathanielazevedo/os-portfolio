@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { FaFileAlt, FaFolderOpen, FaEnvelope, FaUser } from "react-icons/fa";
 import CustomWindow from "./Window";
+import bg from "../../assets/background.jpg";
 
 const icons = [
-  // { id: "resume", label: "Resume", icon: <FaFileAlt /> },
-  // { id: "projects", label: "Projects", icon: <FaFolderOpen /> },
-  // { id: "contact", label: "Contact", icon: <FaEnvelope /> },
-  // { id: "about", label: "About Me", icon: <FaUser /> },
+  { id: "resume", label: "Resume", icon: <FaFileAlt /> },
+  { id: "projects", label: "Projects", icon: <FaFolderOpen /> },
+  { id: "contact", label: "Contact", icon: <FaEnvelope /> },
+  { id: "about", label: "About Me", icon: <FaUser /> },
 ];
 
 const ContentMain = () => {
@@ -29,7 +30,7 @@ const ContentMain = () => {
         display: "flex",
         alignItems: "flex-start",
         justifyContent: "flex-start",
-        // background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(${background}) center/cover no-repeat`,
+        background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(${bg}) center/cover no-repeat`,
         position: "relative",
         padding: "20px",
         backgroundColor: "black",
@@ -77,7 +78,13 @@ const ContentMain = () => {
             >
               {item.icon}
             </div>
-            <span style={{ fontSize: "10px", fontWeight: "500" }}>
+            <span
+              style={{
+                fontSize: "8px",
+                fontWeight: "500",
+                fontFamily: "sans-serif",
+              }}
+            >
               {item.label}
             </span>
           </div>
